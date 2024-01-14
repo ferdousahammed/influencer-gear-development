@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -42,6 +41,11 @@ body{
 }
 
 /* header styles  */
+.container{
+    max-width: 1920px;
+    margin: 0 auto;
+
+}
 header{
     padding: 87px 120px 0;
     margin: 0 auto;
@@ -119,9 +123,154 @@ header{
     gap:25px
 }
 
+
 /* main section  */
 
+/* collection section */
+
+.collection{
+    padding: 0 196px 0;
+    margin: 100px auto 0;
+
+}
+.collection-heading{
+    color: --text-color;
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 4.375rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.box{
+    width: 329px;
+    height: 476px;
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
+.collection-container{
+    display: flex;
+    /* max-width: 1080px; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 30px;
+    column-gap: 30px;
+    margin: 0 auto;
+
+    /* justify-content: space-evenly; */
+}
+.box img{
+    width: 100%;
+}
+
+.product-image{
+    padding: 16px;
+}
+
+.product-text{
+    margin:0 16px 16px;
+}
+
+.product-description{
+    color: #787885;
+    font-size: .875rem;
+    line-height: 1.25re;
+}
+
+.star{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.rating-text{
+    color: var(--gray-80, #5E6366);
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.product-rating{
+    display: flex;
+    gap: 10px;
+    margin: 6px 0 6px;
+}
+
+.product-name{
+    color: #18191F;
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 2.5rem; /* 142.857% */
+}
+
+.product-price{
+    color: var(--Dark-Color, rgba(0, 0, 0, 0.87));
+    font-family: Inter;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+}
+
+
+/* feature section  */
+
+.feature-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+    align-items: center;
+    margin: 100px auto;
+}
+
+.feature-img img{
+    width: 100%;
+}
+
+
+
+.feature-text p{
+    max-width: 501px;
+    margin: 16px 0;
+}
+.feature-text button{
+    border-radius: 2px;
+}
+.feature-text h3{
+    color: #0A0826;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 60px;
+}
 /* footer section  */
+
+footer{
+    background-color: #0A0826;
+    text-align: center;
+    padding: 50px;
+}
+
+.social-links{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 14px;
+
+}
+
+.footer-text h3{
+    color:white;
+}
+.footer-text p{
+    color:white;
+    font-size: .875rem;
+    line-height: 1.25re;
+    margin: 3px;
+}
+
+
+
+
 
 
 @media  screen and (max-width:576px) {
@@ -129,6 +278,17 @@ header{
     header{
         padding: 35px 15px 0 15px;
         text-align: center;
+    }
+    .container{
+        padding: 0 15px;
+    }
+
+    .feature-section, .collection{
+        margin-top: 50px;
+    }
+
+    footer{
+        padding: 20px
     }
 
     .nav-bar{
@@ -170,6 +330,20 @@ header{
         margin-top: 40px;
     }
 
+    .feature-section{
+        margin-bottom: 40px ;
+        text-align: center;
+    }
+
+    .feature-text button{
+        margin: 0 auto;
+    }
+    .feature-text h3{
+        font-size: 24px;
+        line-height: normal
+    }
+    
+
 }
 
 
@@ -181,6 +355,9 @@ header{
 
     .nav-bar{
         flex-direction: column;     
+    }
+    .container{
+        padding: 0 20px;
     }
     .banner{
         flex-direction: column-reverse;
@@ -209,13 +386,23 @@ header{
         margin-bottom: 30px;
     }
 
-    .banner-title{
-        font-size: 28px;
-        line-height: normal;
-    }
-
     .partners{
         margin-top: 30px;
+    }
+
+    .feature-text button{
+        margin: 0 auto;
+    }
+
+    .feature-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .feature-section{
+        text-align: center;
     }
 }
 
