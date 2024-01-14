@@ -276,12 +276,12 @@ footer{
 
 @media  screen and (max-width:576px) {
 
-    header{
+    /* header{
         padding: 35px 15px 0 15px;
         text-align: center;
-    }
+    } */
     .container{
-        padding: 0 15px;
+        padding: 25px 15px 0;
     }
 
     .feature-section, .collection{
@@ -349,16 +349,13 @@ footer{
 
 
 @media screen and (min-width:577px) and (max-width: 992px) {
-    header{
-        padding: 35px 15px 0 15px;
-        text-align: center;
-    }
+
 
     .nav-bar{
         flex-direction: column;     
     }
     .container{
-        padding: 0 20px;
+        padding: 30px 20px;
     }
     .banner{
         flex-direction: column-reverse;
